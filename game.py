@@ -1,21 +1,22 @@
 import sys
-
 import pygame
 
 class Game:
     def __init__(self):
         pygame.init()
 
-        pygame.display.set_caption('ninja game')
+        pygame.display.set_caption('GD Adventures')
         self.screen = pygame.display.set_mode((640, 480))
         self.Icon = pygame.image.load('Resources/Profile Circle.png')
         pygame.display.set_icon(self.Icon)
-        self.img = pygame.image.load('Resources/game_bg_01_001-uhd.png')
+        self.img = pygame.image.load('Resources/gk-icon.png')
 
         self.clock = pygame.time.Clock()
         
     def run(self):
         while True:
+            self.screen.blit(self.img, (100, 100))
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
