@@ -2,16 +2,15 @@ import sys
 
 import pygame
 
-import
-
 class Game:
     def __init__(self):
         pygame.init()
 
         pygame.display.set_caption('ninja game')
         self.screen = pygame.display.set_mode((640, 480))
-        Icon = pygame.image.load('Resources/Profile Circle.png')
-        pygame.display.set_icon(Icon)
+        self.Icon = pygame.image.load('Resources/Profile Circle.png')
+        pygame.display.set_icon(self.Icon)
+        self.img = pygame.image.load('Resources/game_bg_01_001-uhd.png')
 
         self.clock = pygame.time.Clock()
         
