@@ -7,7 +7,7 @@ class Game:
         pygame.init()
 
         pygame.display.set_caption('GD Adventures')
-        self.screen = pygame.display.set_mode((1920, 1080))
+        self.screen = pygame.display.set_mode((1280, 720))
         self.Icon = pygame.image.load('Resources/Profile Circle.png')
         pygame.display.set_icon(self.Icon)
         self.img = pygame.image.load('Resources/Profile Circle.png')
@@ -37,7 +37,6 @@ class Game:
                         self.movement[0] = False
                     if event.key == pygame.K_DOWN:
                         self.movement[1] = False
-
             pygame.display.update()
             self.clock.tick(60)
 
